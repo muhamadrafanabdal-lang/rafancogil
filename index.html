@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jaringan Komputer - M RAFAN AFDAL</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #101828;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #66b3ff;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #101828, #1d4ed8);
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.info {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.12);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* CARD */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+/* LANGKAH */
+.steps {
+    display: grid;
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-left: 6px solid #1d4ed8;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.step span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+/* PPT */
+.ppt-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.ppt-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.ppt-box h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.open-ppt {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.open-ppt:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* VIDEO */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    background: #101828;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* HP */
+@media(max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        JARINGAN KOMPUTER
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#beranda">Beranda</a>
+        </li>
+
+        <li>
+            <a href="#alat">Alat</a>
+        </li>
+
+        <li>
+            <a href="#langkah">Langkah</a>
+        </li>
+
+        <li>
+            <a href="#ppt">PPT</a>
+        </li>
+
+        <li>
+            <a href="#video">Video</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- BERANDA -->
+
+<section class="hero" id="beranda">
+
+    <div class="hero-content">
+
+        <h1>
+            Merangkai Kabel LAN
+        </h1>
+
+        <p>
+            Menghubungkan 2 Laptop Menggunakan Kabel LAN
+            dan Sharing File
+        </p>
+
+        <div class="info">
+
+            <p><b>Nama:</b> M RAFAN AFDAL</p>
+
+            <p><b>NIM:</b> 062640723204</p>
+
+            <p><b>Kelas:</b> 1-TIA</p>
+
+            <p><b>Jurusan:</b> Teknik Komputer</p>
+
+            <p>
+                <b>Prodi:</b>
+                D4 Teknologi Informatika Multimedia Digital
+            </p>
+
+            <p>
+                <b>Mata Kuliah:</b>
+                Jaringan Komputer
+            </p>
+
+            <p>
+                <b>Dosen:</b>
+                Dr. Ali Firdaus, S.Kom., M.Kom
+            </p>
+
+        </div>
+
+        <a href="#ppt" class="btn">
+            Lihat PPT
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ALAT -->
+
+<section id="alat">
+
+    <div class="section-title">
+
+        <h2>Alat dan Bahan</h2>
+
+        <p>
+            Peralatan yang digunakan untuk membuat kabel LAN
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🔌 Kabel UTP</h3>
+
+            <p>
+                Digunakan sebagai media penghantar data
+                antara dua perangkat komputer.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🔗 RJ45</h3>
+
+            <p>
+                Konektor yang dipasang pada ujung kabel UTP.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🛠️ Tang Crimping</h3>
+
+            <p>
+                Digunakan untuk memasang konektor RJ45.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📡 LAN Tester</h3>
+
+            <p>
+                Digunakan untuk mengecek kabel LAN.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LANGKAH -->
+
+<section id="langkah">
+
+    <div class="section-title">
+
+        <h2>Langkah-Langkah</h2>
+
+        <p>
+            Cara membuat dan menggunakan kabel LAN
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <span>01</span>
+
+            <h3>Siapkan Kabel UTP</h3>
+
+            <p>
+                Siapkan kabel UTP sesuai panjang yang diperlukan.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>02</span>
+
+            <h3>Potong Kabel</h3>
+
+            <p>
+                Potong bagian luar kabel menggunakan tang crimping.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>03</span>
+
+            <h3>Susun Kabel</h3>
+
+            <p>
+                Susun kabel berdasarkan urutan warna yang benar.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>04</span>
+
+            <h3>Pasang RJ45</h3>
+
+            <p>
+                Masukkan kabel ke konektor RJ45 lalu crimping.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>05</span>
+
+            <h3>Test Kabel</h3>
+
+            <p>
+                Gunakan LAN tester untuk memastikan kabel bekerja.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>06</span>
+
+            <h3>Hubungkan Dua Laptop</h3>
+
+            <p>
+                Hubungkan kabel LAN ke kedua laptop.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>07</span>
+
+            <h3>Atur IP Address</h3>
+
+            <p>
+                Atur IP kedua laptop agar berada dalam jaringan yang sama.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span>08</span>
+
+            <h3>Sharing File</h3>
+
+            <p>
+                Aktifkan file sharing untuk berbagi file.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PPT -->
+
+<section id="ppt">
+
+    <div class="section-title">
+
+        <h2>📑 Presentasi PPT</h2>
+
+        <p>
+            Materi presentasi Jaringan Komputer
+        </p>
+
+    </div>
+
+
+    <div class="ppt-box">
+
+        <div class="ppt-icon">
+            📊
+        </div>
+
+        <h3>
+            PPT Jaringan Komputer
+        </h3>
+
+        <p>
+            Klik tombol di bawah untuk membuka
+            file presentasi yang sudah dimasukkan
+            ke dalam website.
+        </p>
+
+
+        <!-- FILE PPT SUDAH ADA DI WEBSITE -->
+
+        <a
+            href="ppt/PPT_M_RAFAN_AFDAL_062640723204.pptx"
+            target="_blank"
+            class="open-ppt">
+
+            📖 Buka PPT
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO -->
+
+<section id="video">
+
+    <div class="section-title">
+
+        <h2>🎥 Video Praktik</h2>
+
+        <p>
+            Dokumentasi praktik Jaringan Komputer
+        </p>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <div class="video-card">
+
+            <h3>Video Praktik 1</h3>
+
+            <br>
+
+            <video controls>
+
+                <source
+                    src="video/1000191120.mp4"
+                    type="video/mp4">
+
+                Browser tidak mendukung video.
+
+            </video>
+
+        </div>
+
+
+        <div class="video-card">
+
+            <h3>Video Praktik 2</h3>
+
+            <br>
+
+            <video controls>
+
+                <source
+                    src="video/1000191112.mp4"
+                    type="video/mp4">
+
+                Browser tidak mendukung video.
+
+            </video>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 M RAFAN AFDAL
+    </p>
+
+    <p>
+        Jaringan Komputer - 1-TIA
+    </p>
+
+</footer>
+
+
+</body>
+</html>
